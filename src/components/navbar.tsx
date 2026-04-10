@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./theme-toggle";
 import MobileMenu from "./mobile-menu";
+import Image from "next/image";
 
 const navItems = [
   { href: "/projects", label: "Projects" },
