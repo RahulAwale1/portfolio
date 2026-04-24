@@ -48,6 +48,24 @@ export default function ProjectsPage() {
 
             <FadeIn delay={0.05}>
               <ProjectShowcaseCard
+                title="InboxPilot AI"
+                description="A full-stack AI-powered email assistant that integrates with Gmail and Google Calendar to classify job-related emails, track application status, automate interview scheduling, and generate an AI-driven career digest. Built with Next.js, FastAPI, PostgreSQL, and OpenAI, and deployed on Vercel and Render."
+                href="/projects/inboxpilot-ai"
+                tags={[
+                  "Next.js",
+                  "FastAPI",
+                  "PostgreSQL",
+                  "OpenAI",
+                  "OAuth",
+                  "Gmail API",
+                  "Calendar API",
+                ]}
+                live="https://inboxai.rahulawale.com"
+              />
+            </FadeIn>
+
+            <FadeIn delay={0.1}>
+              <ProjectShowcaseCard
                 title="Belleville By-Law Assistant"
                 description="An OCR-powered RAG assistant for municipal by-law documents built with Tesseract, MiniLM embeddings, FAISS retrieval, FastAPI, and Streamlit/Gradio interfaces, designed to turn scanned PDFs into citation-grounded legal question answering workflows."
                 href="/projects/belleville-by-law-assistant"
@@ -64,7 +82,7 @@ export default function ProjectsPage() {
               />
             </FadeIn>
 
-            <FadeIn delay={0.1}>
+            <FadeIn delay={0.15}>
               <ProjectShowcaseCard
                 title="Car Price Prediction"
                 description="An end-to-end machine learning project covering exploratory analysis, feature engineering, model comparison, and deployment as a FastAPI microservice. Random Forest achieved the strongest performance, with R² of 0.908 and lower error than linear baselines."
@@ -80,7 +98,7 @@ export default function ProjectsPage() {
               />
             </FadeIn>
 
-            <FadeIn delay={0.15}>
+            <FadeIn delay={0.2}>
               <ProjectShowcaseCard
                 title="Stock Price Prediction: ARIMA vs LSTM"
                 description="A time-series forecasting project on Tesla stock data comparing ARIMA and LSTM models. LSTM significantly outperformed ARIMA, reducing RMSE from about 43.25 to 13.19 and better capturing volatile price movement."

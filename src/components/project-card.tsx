@@ -54,6 +54,7 @@ export default function ProjectCard({
                   className="inline-block text-xs font-medium text-[var(--accent)] hover:underline"
                 >
                   ● Live Project
+                  {title === "InboxPilot AI" && (<span className="ml-2 text-xs text-muted">(OAuth in testing)</span>)}
                 </a>
               </div>
             )}

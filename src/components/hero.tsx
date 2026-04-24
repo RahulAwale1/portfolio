@@ -23,16 +23,17 @@ export default function Hero() {
 
             <FadeIn delay={0.12}>
               <h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight md:text-7xl">
-                Building real-world AI systems,
+                Rahul Awale.
+                {/* Building real-world AI systems,
                 <span className="block text-[var(--accent)]">
                   not just models.
-                </span>
+                </span> */}
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.2}>
               <p className="mt-6 max-w-2xl text-base leading-8 text-muted md:text-lg">
-                I’m Rahul Awale, an Applied AI / Machine Learning Engineer focused on
+                An Applied AI / Machine Learning Engineer focused on
                 building end-to-end systems - from data pipelines and models to APIs,
                 retrieval systems, and production deployment.
               </p>

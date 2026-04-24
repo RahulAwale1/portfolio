@@ -58,6 +58,24 @@ export default function HomePage() {
 
               <FadeIn delay={0.1}>
                 <ProjectCard
+                title="InboxPilot AI"
+                description="AI-powered email assistant that integrates with Gmail and Google Calendar to classify job-related emails, track application status, automate interview scheduling, and generate a structured career digest. Built as a full-stack AI system using LLMs, APIs, and workflow automation."
+                href="/projects/inboxpilot-ai"
+                tags={[
+                  "Next.js",
+                  "FastAPI",
+                  "PostgreSQL",
+                  "OpenAI",
+                  "OAuth",
+                  "Gmail API",
+                  "Calendar API",
+                ]}
+                live="https://inboxai.rahulawale.com"
+              />
+              </FadeIn>
+
+              <FadeIn delay={0.15}>
+                <ProjectCard
                   title="Belleville By-Law Assistant"
                   description="An OCR-powered RAG assistant for municipal by-law documents built with Tesseract, MiniLM embeddings, FAISS retrieval, FastAPI, and Streamlit/Gradio interfaces, designed to turn scanned PDFs into citation-grounded legal question answering workflows."
                   href="/projects/belleville-by-law-assistant"
@@ -73,7 +91,7 @@ export default function HomePage() {
                 />
               </FadeIn>
 
-              <FadeIn delay={0.15}>
+              <FadeIn delay={0.2}>
                 <ProjectCard
                   title="Car Price Prediction"
                   description="An end-to-end machine learning project covering exploratory analysis, feature engineering, model comparison, and deployment as a FastAPI microservice. Random Forest achieved the strongest performance with R² of 0.908."
@@ -88,7 +106,7 @@ export default function HomePage() {
                 />
               </FadeIn>
 
-              <FadeIn delay={0.2}>
+              <FadeIn delay={0.25}>
                 <ProjectCard
                   title="Stock Price Prediction: ARIMA vs LSTM"
                   description="A time-series forecasting project on Tesla stock data comparing ARIMA and LSTM models. LSTM significantly outperformed ARIMA, reducing RMSE from about 43.25 to 13.19 on the evaluated series."

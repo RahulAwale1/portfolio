@@ -102,8 +102,8 @@ export default function ResumePage() {
             <div className="grid gap-6 md:grid-cols-3">
               <FadeIn delay={0.05}>
                 <HighlightCard
-                  title="Applied AI Projects"
-                  text="Built projects across RAG systems, semantic retrieval, regression APIs, and time-series forecasting with a focus on practical implementation."
+                  title="Applied AI Systems"
+                  text="Building real-world AI systems across retrieval-augmented generation, workflow automation, and production-ready applications. I focus on combining machine learning, APIs, and system design to create scalable, deployable AI products."
                 />
               </FadeIn>
 
