@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./theme-toggle";
 import MobileMenu from "./mobile-menu";
-import Image from "next/image";
 
 const navItems = [
   { href: "/projects", label: "Projects" },
@@ -25,19 +25,25 @@ export default function Navbar() {
             border border-[var(--border)]
             bg-[color:var(--card-solid)]/92
             backdrop-blur-xl
-            shadow-[0_12px_40px_rgba(0,0,0,0.08)]
+            shadow-[0_18px_50px_-35px_rgba(23,32,51,0.42)]
             dark:bg-[color:var(--card-solid)]/85
           "
         >
-
           <div className="relative flex items-center justify-between px-5 py-4 md:px-7">
             <Link
               href="/"
               className="group flex items-center gap-3"
               aria-label="Go to homepage"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[var(--accent)]/12 text-[var(--accent)] ring-1 ring-[var(--accent)]/10 transition duration-300 group-hover:scale-[1.03] group-hover:bg-[var(--accent)]/16">
-                <span className="text-sm font-bold tracking-wide">RA</span>
+              <div className="flex h-12 w-16 items-center justify-center overflow-hidden rounded-2xl bg-[#1f3042] p-1.5 ring-1 ring-white/10 transition duration-300 group-hover:scale-[1.03] dark:bg-[#0b1621] dark:ring-white/12">
+                <Image
+                  src="/logo.png"
+                  alt="Rahul Awale logo"
+                  width={391}
+                  height={290}
+                  priority
+                  className="h-full w-full object-contain"
+                />
               </div>
 
               <div className="leading-tight">
@@ -60,9 +66,9 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`rounded-2xl px-4 py-2.5 text-sm font-medium transition duration-300 ${
+                    className={`rounded-2xl px-4 py-2.5 text-sm font-medium transition duration-300 ease-out active:scale-[0.98] ${
                       isActive
-                        ? "bg-[var(--accent)] text-white shadow-sm"
+                        ? "bg-[var(--accent)] text-white"
                         : "text-muted hover:bg-black/5 hover:text-[var(--foreground)] dark:hover:bg-white/5"
                     }`}
                   >

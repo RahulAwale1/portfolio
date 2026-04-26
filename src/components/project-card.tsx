@@ -36,7 +36,7 @@ export default function ProjectCard({
       tabIndex={0}
       onClick={goToCaseStudy}
       onKeyDown={handleKeyDown}
-      className="surface group h-full cursor-pointer rounded-[2rem] p-6 flex flex-col transition duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+      className="surface group flex h-full min-h-[430px] cursor-pointer flex-col rounded-[2rem] p-6 transition duration-300 ease-out hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] active:scale-[0.99]"
       aria-label={`Open case study for ${title}`}
     >
       <div className="flex h-full flex-col gap-5">
@@ -65,7 +65,7 @@ export default function ProjectCard({
           </span>
         </div>
 
-        <p className="text-sm leading-7 text-muted md:text-[15px]">
+        <p className="line-clamp-6 text-sm leading-7 text-muted md:text-[15px]">
           {description}
         </p>
 
@@ -81,7 +81,7 @@ export default function ProjectCard({
         </div>
 
         <div className="mt-auto pt-4">
-          <span className="inline-flex rounded-2xl bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-lg">
+          <span className="inline-flex rounded-2xl bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white transition duration-300 group-hover:-translate-y-0.5">
             View Case Study
           </span>
         </div>

@@ -38,7 +38,7 @@ export default function ProjectShowcaseCard({
       tabIndex={0}
       onClick={goToCaseStudy}
       onKeyDown={handleKeyDown}
-      className={`surface group block cursor-pointer rounded-[2rem] p-6 md:p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[var(--accent)] ${
+      className={`surface group block cursor-pointer rounded-[2rem] p-6 transition duration-300 ease-out hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[var(--accent)] active:scale-[0.99] md:p-8 ${
         highlight ? "ring-1 ring-[var(--accent)]/20" : ""
       }`}
       aria-label={`Open case study for ${title}`}
@@ -76,7 +76,7 @@ export default function ProjectShowcaseCard({
           {tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-muted"
+              className="rounded-full border border-[var(--border)] bg-white/35 px-3 py-1 text-xs text-muted dark:bg-white/[0.03]"
             >
               {tag}
             </span>
@@ -84,7 +84,7 @@ export default function ProjectShowcaseCard({
         </div>
 
         <div>
-          <span className="inline-flex rounded-2xl bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white transition duration-300 group-hover:-translate-y-0.5 group-hover:shadow-lg">
+          <span className="inline-flex rounded-2xl bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white transition duration-300 group-hover:-translate-y-0.5">
             View Case Study
           </span>
         </div>

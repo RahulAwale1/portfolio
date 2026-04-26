@@ -1,12 +1,70 @@
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
-import ProjectCard from "@/components/project-card";
+import ProjectCarousel from "@/components/project-carousel";
 import FadeIn from "@/components/fade-in";
 import CapabilityCard from "@/components/capability-card";
 import ExperienceCard from "@/components/experience-card";
 import ContactCTA from "@/components/contact-cta";
+import EducationTimeline from "@/components/education-timeline";
 
+const featuredProjects = [
+  {
+    title: "CivicAI",
+    description:
+      "A full-stack AI-powered municipal by-law assistant that combines RAG, pgvector semantic retrieval, Redis and Celery background processing, S3-based document storage, and FastAPI backend services to deliver structured, citation-backed answers through a production-style architecture.",
+    href: "/projects/civicai",
+    tags: [
+      "RAG",
+      "FastAPI",
+      "Next.js",
+      "pgvector",
+      "Redis",
+      "Celery",
+      "AWS",
+      "S3",
+      "Cloudflare",
+    ],
+    live: "https://civicai.rahulawale.com",
+  },
+  {
+    title: "InboxPilot AI",
+    description:
+      "AI-powered email assistant that integrates with Gmail and Google Calendar to classify job-related emails, track application status, automate interview scheduling, and generate a structured career digest. Built as a full-stack AI system using LLMs, APIs, and workflow automation.",
+    href: "/projects/inboxpilot-ai",
+    tags: [
+      "Next.js",
+      "FastAPI",
+      "PostgreSQL",
+      "OpenAI",
+      "OAuth",
+      "Gmail API",
+      "Calendar API",
+    ],
+    live: "https://inboxai.rahulawale.com",
+  },
+  {
+    title: "Belleville By-Law Assistant",
+    description:
+      "An OCR-powered RAG assistant for municipal by-law documents built with Tesseract, MiniLM embeddings, FAISS retrieval, FastAPI, and Streamlit/Gradio interfaces, designed to turn scanned PDFs into citation-grounded legal question answering workflows.",
+    href: "/projects/belleville-by-law-assistant",
+    tags: ["OCR", "RAG", "FAISS", "FastAPI", "Streamlit", "Gradio", "Llama3"],
+  },
+  {
+    title: "Car Price Prediction",
+    description:
+      "An end-to-end machine learning project covering exploratory analysis, feature engineering, model comparison, and deployment as a FastAPI microservice. Random Forest achieved the strongest performance with R² of 0.908.",
+    href: "/projects/car-price-prediction",
+    tags: ["Regression", "Random Forest", "scikit-learn", "FastAPI", "Docker"],
+  },
+  {
+    title: "Stock Price Prediction: ARIMA vs LSTM",
+    description:
+      "A time-series forecasting project on Tesla stock data comparing ARIMA and LSTM models. LSTM significantly outperformed ARIMA, reducing RMSE from about 43.25 to 13.19 on the evaluated series.",
+    href: "/projects/stock-price-forecasting",
+    tags: ["Time Series", "ARIMA", "LSTM", "TensorFlow", "yfinance"],
+  },
+];
 
 export default function HomePage() {
   return (
@@ -33,94 +91,9 @@ export default function HomePage() {
               </div>
             </FadeIn>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              <FadeIn delay={0.05}>
-                <div className="md:col-span-2">
-                  <ProjectCard
-                    title="CivicAI"
-                    description="A full-stack AI-powered municipal by-law assistant that combines RAG, pgvector semantic retrieval, Redis and Celery background processing, S3-based document storage, and FastAPI backend services to deliver structured, citation-backed answers through a production-style architecture."
-                    href="/projects/civicai"
-                    tags={[
-                      "RAG",
-                      "FastAPI",
-                      "Next.js",
-                      "pgvector",
-                      "Redis",
-                      "Celery",
-                      "AWS",
-                      "S3",
-                      "Cloudflare",
-                    ]}
-                    live="https://civicai.rahulawale.com"
-                  />
-                </div>
-              </FadeIn>
-
-              <FadeIn delay={0.1}>
-                <ProjectCard
-                title="InboxPilot AI"
-                description="AI-powered email assistant that integrates with Gmail and Google Calendar to classify job-related emails, track application status, automate interview scheduling, and generate a structured career digest. Built as a full-stack AI system using LLMs, APIs, and workflow automation."
-                href="/projects/inboxpilot-ai"
-                tags={[
-                  "Next.js",
-                  "FastAPI",
-                  "PostgreSQL",
-                  "OpenAI",
-                  "OAuth",
-                  "Gmail API",
-                  "Calendar API",
-                ]}
-                live="https://inboxai.rahulawale.com"
-              />
-              </FadeIn>
-
-              <FadeIn delay={0.15}>
-                <ProjectCard
-                  title="Belleville By-Law Assistant"
-                  description="An OCR-powered RAG assistant for municipal by-law documents built with Tesseract, MiniLM embeddings, FAISS retrieval, FastAPI, and Streamlit/Gradio interfaces, designed to turn scanned PDFs into citation-grounded legal question answering workflows."
-                  href="/projects/belleville-by-law-assistant"
-                  tags={[
-                    "OCR",
-                    "RAG",
-                    "FAISS",
-                    "FastAPI",
-                    "Streamlit",
-                    "Gradio",
-                    "Llama3",
-                  ]}
-                />
-              </FadeIn>
-
-              <FadeIn delay={0.2}>
-                <ProjectCard
-                  title="Car Price Prediction"
-                  description="An end-to-end machine learning project covering exploratory analysis, feature engineering, model comparison, and deployment as a FastAPI microservice. Random Forest achieved the strongest performance with R² of 0.908."
-                  href="/projects/car-price-prediction"
-                  tags={[
-                    "Regression",
-                    "Random Forest",
-                    "scikit-learn",
-                    "FastAPI",
-                    "Docker",
-                  ]}
-                />
-              </FadeIn>
-
-              <FadeIn delay={0.25}>
-                <ProjectCard
-                  title="Stock Price Prediction: ARIMA vs LSTM"
-                  description="A time-series forecasting project on Tesla stock data comparing ARIMA and LSTM models. LSTM significantly outperformed ARIMA, reducing RMSE from about 43.25 to 13.19 on the evaluated series."
-                  href="/projects/stock-price-forecasting"
-                  tags={[
-                    "Time Series",
-                    "ARIMA",
-                    "LSTM",
-                    "TensorFlow",
-                    "yfinance",
-                  ]}
-                />
-              </FadeIn>
-            </div>
+            <FadeIn delay={0.05}>
+              <ProjectCarousel projects={featuredProjects} />
+            </FadeIn>
           </div>
         </section>
 
@@ -141,7 +114,7 @@ export default function HomePage() {
               </div>
             </FadeIn>
 
-            <div className="grid items-stretch gap-6 md:grid-cols-3">
+            <div className="grid auto-rows-fr items-stretch gap-6 md:grid-cols-3">
               <FadeIn delay={0.05}>
                 <CapabilityCard
                   title="Machine Learning Systems"
@@ -238,117 +211,7 @@ export default function HomePage() {
               </div>
             </FadeIn>
 
-            <div className="relative">
-              <div className="absolute left-4 top-0 hidden h-full w-px bg-[var(--border)] md:block" />
-
-              <div className="grid gap-6">
-                <FadeIn delay={0.05}>
-                  <div className="surface relative rounded-[2rem] p-6 md:p-8">
-                    <div className="absolute left-[-2px] top-10 hidden h-3 w-3 rounded-full bg-[var(--accent)] md:block" />
-
-                    <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-start">
-                      <div>
-                        <div className="flex flex-wrap items-center gap-3">
-                          <span className="rounded-full bg-[var(--accent)]/12 px-3 py-1 text-xs font-medium text-[var(--accent)]">
-                            Current
-                          </span>
-                          <span className="text-xs uppercase tracking-[0.18em] text-muted">
-                            Postgraduate
-                          </span>
-                        </div>
-
-                        <h3 className="mt-4 text-2xl font-semibold tracking-tight">
-                          Loyalist College
-                        </h3>
-
-                        <p className="mt-2 text-base font-medium text-muted">
-                          Post-Graduate Certificate in Artificial Intelligence & Data Science
-                        </p>
-
-                        <p className="mt-4 max-w-2xl text-sm leading-7 text-muted md:text-[15px]">
-                          Focused on machine learning, data science, applied AI systems, and
-                          project-based development. This program helped deepen my work across
-                          retrieval systems, forecasting, model evaluation, and deployment-ready
-                          AI applications.
-                        </p>
-
-                        <div className="mt-6 flex flex-wrap gap-2">
-                          {[
-                            "Machine Learning",
-                            "Applied AI",
-                            "Data Science",
-                            "RAG Systems",
-                            "Forecasting",
-                          ].map((item) => (
-                            <span
-                              key={item}
-                              className="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-muted"
-                            >
-                              {item}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="surface-solid rounded-2xl px-4 py-3 text-sm text-muted">
-                        2024 – 2026
-                      </div>
-                    </div>
-                  </div>
-                </FadeIn>
-
-                <FadeIn delay={0.1}>
-                  <div className="surface relative rounded-[2rem] p-6 md:p-8">
-                    <div className="absolute left-[-2px] top-10 hidden h-3 w-3 rounded-full bg-[var(--accent)]/60 md:block" />
-
-                    <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-start">
-                      <div>
-                        <div className="flex flex-wrap items-center gap-3">
-                          <span className="text-xs uppercase tracking-[0.18em] text-muted">
-                            Undergraduate
-                          </span>
-                        </div>
-
-                        <h3 className="mt-4 text-2xl font-semibold tracking-tight">
-                          London Metropolitan University
-                        </h3>
-
-                        <p className="mt-2 text-base font-medium text-muted">
-                          BSc (Hons) in Computing
-                        </p>
-
-                        <p className="mt-4 max-w-2xl text-sm leading-7 text-muted md:text-[15px]">
-                          Built my core foundation in computing, programming, software
-                          development, and problem solving. This degree helped shape the
-                          engineering mindset that now supports my work in machine learning
-                          systems and applied AI projects.
-                        </p>
-
-                        <div className="mt-6 flex flex-wrap gap-2">
-                          {[
-                            "Programming",
-                            "Software Development",
-                            "Problem Solving",
-                            "Computing Fundamentals",
-                          ].map((item) => (
-                            <span
-                              key={item}
-                              className="rounded-full border border-[var(--border)] px-3 py-1 text-xs text-muted"
-                            >
-                              {item}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="surface-solid rounded-2xl px-4 py-3 text-sm text-muted">
-                        2019 – 2022
-                      </div>
-                    </div>
-                  </div>
-                </FadeIn>
-              </div>
-            </div>
+            <EducationTimeline />
           </div>
         </section>
 
