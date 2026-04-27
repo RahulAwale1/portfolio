@@ -4,9 +4,9 @@ import Navbar from "@/components/navbar";
 import ProjectCarousel from "@/components/project-carousel";
 import FadeIn from "@/components/fade-in";
 import CapabilityCard from "@/components/capability-card";
-import ExperienceCard from "@/components/experience-card";
 import ContactCTA from "@/components/contact-cta";
 import EducationTimeline from "@/components/education-timeline";
+import ExperienceTimeline from "@/components/experience-timeline";
 
 const featuredProjects = [
   {
@@ -178,19 +178,7 @@ export default function HomePage() {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.05}>
-              <ExperienceCard
-                role="Software Developer"
-                company="Aalaya Soft-tech Pvt. Ltd., Nepal"
-                period="Jul 2022 – Jan 2024"
-                points={[
-                  "Developed and maintained Flutter applications integrated with REST APIs and analytics modules.",
-                  "Collaborated with backend teams to design APIs and implement data-driven features.",
-                  "Mentored interns, reducing bug backlog by 20% and improving delivery speed by 20%.",
-                  "Built production systems with a strong focus on performance, maintainability, and user experience.",
-                ]}
-              />
-            </FadeIn>
+            <ExperienceTimeline />
           </div>
         </section>
 
