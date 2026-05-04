@@ -51,66 +51,44 @@ export default function Hero() {
           </div>
 
           <FadeIn delay={0.2}>
-            <div className="surface animate-float-soft relative overflow-hidden rounded-[2.25rem] p-5 md:p-6">
+            <div className="surface animate-float-soft relative min-h-[26rem] overflow-hidden rounded-[2.25rem] p-5 md:min-h-[32rem] md:p-6">
               <div className="noise-layer pointer-events-none absolute inset-0 opacity-[0.04]" />
               <div className="absolute left-0 top-10 h-px w-full bg-[var(--accent)]/30 animate-scan-line" />
 
-              <div className="relative rounded-[1.75rem] border border-[var(--border)] bg-white/70 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] dark:bg-white/[0.04]">
-                <div className="flex items-center justify-between gap-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-muted">
-                      Toronto, ON
-                    </p>
+              <div className="relative flex h-full min-h-[23.5rem] flex-col justify-between overflow-hidden rounded-[1.75rem] border border-[var(--border)] bg-white/70 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] dark:bg-white/[0.04] md:min-h-[29.5rem]">
+                <div className="pointer-events-none absolute inset-x-6 top-8 h-px bg-gradient-to-r from-transparent via-[var(--accent)]/30 to-transparent" />
+                <div className="pointer-events-none absolute inset-x-10 bottom-20 h-20 rounded-full bg-[var(--accent)]/10 blur-3xl" />
 
-                    <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-                      Applied AI / ML Engineer
-                    </h2>
-                  </div>
-
+                <div className="relative flex items-center justify-between">
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
+                    Toronto, ON
+                  </p>
                   <div className="relative h-3 w-3 rounded-full bg-[var(--accent)]">
                     <span className="animate-breathe absolute inset-0 rounded-full bg-[var(--accent)]" />
                   </div>
                 </div>
 
-                <p className="mt-5 text-sm leading-7 text-muted md:text-base">
-                  Focused on machine learning systems, RAG pipelines, semantic search,
-                  and deployable backend services.
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {[
-                    "Python",
-                    "ML Systems",
-                    "RAG",
-                    "FastAPI",
-                    "Docker",
-                    "AWS",
-                  ].map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-[var(--border)] bg-white/50 px-3 py-1 text-xs text-muted dark:bg-white/5"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                <div className="relative flex flex-1 items-center justify-center py-6">
+                  <div className="absolute bottom-10 h-8 w-44 rounded-full bg-[var(--foreground)]/10 blur-xl dark:bg-black/25" />
+                  <video
+                    src="/headmoving.mov"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="relative z-10 max-h-[18rem] w-full max-w-[18rem] object-contain drop-shadow-[0_28px_42px_rgba(15,26,36,0.28)] md:max-h-[24rem] md:max-w-[24rem]"
+                    aria-label="Animated avatar of Rahul Awale"
+                  />
                 </div>
 
-                <div className="mt-8 grid grid-cols-2 gap-3">
-                  <div className="surface-solid rounded-2xl p-4">
-                    <p className="text-xs uppercase tracking-[0.18em] text-muted">
-                      Focus
-                    </p>
-                    <p className="mt-2 text-sm font-medium">ML + GenAI</p>
-                  </div>
-
-                  <div className="surface-solid rounded-2xl p-4">
-                    <p className="text-xs uppercase tracking-[0.18em] text-muted">
-                      Strength
-                    </p>
-                    <p className="mt-2 text-sm font-medium">
-                      End-to-End Systems
-                    </p>
-                  </div>
+                <div className="relative border-t border-[var(--border)] pt-5">
+                  <h2 className="text-2xl font-semibold tracking-tight">
+                    Applied AI / ML Engineer
+                  </h2>
+                  <p className="mt-2 text-sm leading-6 text-muted">
+                    Building end-to-end ML, RAG, and deployable AI systems.
+                  </p>
                 </div>
               </div>
             </div>

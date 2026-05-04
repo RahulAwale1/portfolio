@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowUpRight, Link, Mail, Copy, Check } from "lucide-react";
+import { ArrowUpRight, Copy, Check } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 type ContactMethodCardProps = {
@@ -12,13 +13,13 @@ type ContactMethodCardProps = {
 function getIcon(label: string) {
   switch (label.toLowerCase()) {
     case "email":
-      return <Mail size={22} />;
+      return "/gmail.png";
     case "linkedin":
-      return <Link size={22} />;
+      return "/linkedin.png";
     case "github":
-      return <Link size={22} />;
+      return "/github.png";
     default:
-      return <ArrowUpRight size={22} />;
+      return null;
   }
 }
 
@@ -30,6 +31,7 @@ export default function ContactMethodCard({
   const [copied, setCopied] = useState(false);
   const isExternal = href.startsWith("http");
   const isEmail = href.startsWith("mailto:");
+  const icon = getIcon(label);
 
   const handleCopy = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -57,8 +59,18 @@ export default function ContactMethodCard({
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <div className="surface-solid flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-[var(--accent)]">
-            {getIcon(label)}
+          <div className="surface-solid flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl">
+            {icon ? (
+              <Image
+                src={icon}
+                alt=""
+                width={24}
+                height={24}
+                className="h-6 w-6 object-contain"
+              />
+            ) : (
+              <ArrowUpRight size={22} className="text-[var(--accent)]" />
+            )}
           </div>
 
           <div className="min-w-0">

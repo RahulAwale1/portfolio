@@ -7,6 +7,7 @@ import CapabilityCard from "@/components/capability-card";
 import ContactCTA from "@/components/contact-cta";
 import EducationTimeline from "@/components/education-timeline";
 import ExperienceTimeline from "@/components/experience-timeline";
+import HomepageReveal from "@/components/homepage-reveal";
 
 const featuredProjects = [
   {
@@ -68,7 +69,7 @@ const featuredProjects = [
 
 export default function HomePage() {
   return (
-    <>
+    <HomepageReveal>
       <Navbar />
 
       <main>
@@ -207,6 +208,6 @@ export default function HomePage() {
       </main>
 
       <Footer />
-    </>
+    </HomepageReveal>
   );
 }
