@@ -19,7 +19,7 @@ const experienceItems = [
   {
     role: "Flutter Developer",
     company: "Yeti Tech Pvt. Ltd., Nepal",
-    period: "Jun 2022 – Jan 2023",
+    period: "Jul 2022 – Jan 2023",
     type: "Mobile Development",
     points: [
       "Developed Flutter application features with responsive, user-focused interfaces.",
